@@ -1,0 +1,26 @@
+@use "../../variables/breakpoints";
+@use "../../variables/colors/single-price-grid";
+
+.price-grid {
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 30px 10px rgba(0, 0, 0, 0.1);
+    max-width: 480px;
+
+    @media (min-width: breakpoints.$desktop) {
+        max-width: 1000px;
+    }
+
+    &__information-container {
+        background-color: single-price-grid.$background;
+    }
+
+    &__price-container {
+        background-color: single-price-grid.$primary;
+    }
+
+    &__why-us-container {
+        background-color: single-price-grid.$secondary;
+    }
+}
