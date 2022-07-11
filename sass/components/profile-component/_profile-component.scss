@@ -1,0 +1,43 @@
+.profile-card {
+    border-radius: 1em;
+    overflow: hidden;
+    width: 400px;
+    height: 600px;
+
+    display: flex;
+    flex-direction: column;
+
+    &__background {
+        background-image: url(../images/bg-pattern-card.svg);
+        height: 30%;
+    }
+    &__content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        height: 70%;
+    }
+    &__profile {
+        margin-top: -75px;
+        border-radius: 50%;
+        width: 150px;
+        height: auto;
+    }
+    &__title {
+        margin-top: 1em;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    &__age {
+        margin-left: 5px;
+        font-size: 1em;
+        font-weight: normal;
+        opacity: 0.7;
+    }
+    &__city {
+        opacity: 0.7;
+    }
+    &__social-info {
+    }
+}
