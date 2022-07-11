@@ -1,16 +1,79 @@
+@use "../../variables/colors/order-summary";
+
 .order-summary {
     &.card {
         width: 100%;
         min-width: 25em;
-        max-width: 35em;
-        border-radius: 2em;
+        max-width: 30em;
+        border-radius: 1em;
         box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.1);
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         flex-direction: column;
         overflow: hidden;
+        background-color: order-summary.$primary-color;
+        color: order-summary.$typography;
 
-        &_image {
+        &__content {
+            padding-top: 1em;
+            padding-left: 3em;
+            padding-right: 3em;
+            padding-bottom: 1.5em;
+        }
+
+        &__title,
+        &__description {
+            text-align: center;
+        }
+
+        &__description {
+            color: order-summary.$typography-light;
+            line-height: 1.5em;
+        }
+        &__plan {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 0.7em;
+            color: order-summary.$typography;
+            background-color: order-summary.$secondary-color;
+            padding: 1.5em;
+            gap: 10px;
+        }
+        &__button {
+            margin-top: 2em;
+            font-weight: bold;
+            background-color: order-summary.$contrast-color;
+            color: order-summary.$primary-color;
+            width: 100%;
+            padding: 1em;
+            border-radius: 0.7em;
+            filter: drop-shadow(7px 7px 13px rgba(0, 0, 0, 0.6));
+        }
+        &__cancel {
+            margin-top: 15px;
+            color: order-summary.$typography-light;
+            font-weight: bold;
+            width: 100%;
+            padding: 1em;
+        }
+    }
+
+    &.plan {
+        &__title {
+            font-weight: bold;
+        }
+        &__information {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-right: auto;
+        }
+        &__icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-image: url(../images/order-summary/icon-music.svg);
         }
     }
 }
