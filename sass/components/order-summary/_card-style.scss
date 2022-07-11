@@ -11,19 +11,54 @@
         justify-content: center;
         flex-direction: column;
         overflow: hidden;
-        background-color: white;
+        background-color: order-summary.$primary-color;
         color: order-summary.$typography;
+
         &__content {
             padding-left: 3em;
             padding-right: 3em;
         }
+
         &__title,
         &__description {
             text-align: center;
         }
+
+        &__title {
+            padding-top: 1em;
+        }
+
         &__description {
             color: order-summary.$typography-light;
             line-height: 1.5em;
+        }
+        &__plan {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 0.7em;
+            color: order-summary.$typography;
+            background-color: order-summary.$secondary-color;
+            padding: 1.5em;
+            gap: 10px;
+        }
+    }
+
+    &.plan {
+        &__title {
+            font-weight: bold;
+        }
+        &__information {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-right: auto;
+        }
+        &__icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-image: url(../images/order-summary/icon-music.svg);
         }
     }
 }
