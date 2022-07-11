@@ -1,0 +1,84 @@
+@use "../../variables/colors/column-preview";
+@use "../../variables/breakpoints";
+@use "../../mixins/columns-buttons";
+
+.columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: column-preview.$typography;
+    min-height: 100vh;
+
+    &__left {
+        background-color: column-preview.$first-card;
+        button {
+            @include columns-buttons.button(
+                column-preview.$typography,
+                column-preview.$first-card
+            );
+        }
+    }
+
+    &__middle {
+        background-color: column-preview.$second-card;
+        button {
+            @include columns-buttons.button(
+                column-preview.$typography,
+                column-preview.$second-card
+            );
+        }
+    }
+
+    &__right {
+        background-color: column-preview.$third-card;
+        button {
+            @include columns-buttons.button(
+                column-preview.$typography,
+                column-preview.$third-card
+            );
+        }
+    }
+
+    &__title {
+        margin-top: 0.7em;
+        font-size: 3.5em;
+        text-transform: uppercase;
+        transform: scaleY(1.6);
+        @media (min-width: breakpoints.$desktop) {
+            font-size: 2.5em;
+        }
+    }
+
+    &__description {
+        font-size: 1.5em;
+        line-height: 1.5em;
+        @media (min-width: breakpoints.$desktop) {
+            font-size: 1em;
+        }
+    }
+
+    @media (min-width: breakpoints.$desktop) {
+        flex-direction: row;
+    }
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5em;
+    gap: 2.5em;
+    @media (min-width: breakpoints.$desktop) {
+        flex: 1;
+        height: 60vh;
+        padding: 3em;
+    }
+    img {
+        width: 7em;
+    }
+}
+
+.columns {
+    border-radius: 1em;
+    overflow: hidden;
+}
