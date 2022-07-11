@@ -1,6 +1,9 @@
 @use "../../variables/breakpoints";
 
 .article-preview {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
     border-radius: 1.5em;
     overflow: hidden;
     display: flex;
@@ -8,4 +11,20 @@
     width: 400px;
     min-height: 400px;
     box-shadow: 10px 10px 30px 10px rgba(0, 0, 0, 0.1);
+
+    &__image {
+        object-fit: cover;
+    }
+    &__content {
+        padding: 2em;
+    }
+    &__title {
+        font-size: 1.3em;
+        font-weight: bold;
+        opacity: 0.9;
+        margin-bottom: 1em;
+    }
+    &__description {
+        opacity: 0.9;
+    }
 }
