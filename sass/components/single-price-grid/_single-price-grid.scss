@@ -10,6 +10,8 @@
 
     @media (min-width: breakpoints.$desktop) {
         max-width: 1000px;
+        display: flex;
+        flex-direction: column;
     }
 
     &__information-container {
@@ -19,11 +21,13 @@
 
     &__price-container {
         padding: 2em;
+        color: single-price-grid.$background;
         background-color: single-price-grid.$primary;
     }
 
     &__why-us-container {
         padding: 2em;
+        color: single-price-grid.$background;
         background-color: single-price-grid.$secondary;
     }
 
@@ -45,5 +49,45 @@
     &__description {
         line-height: 2em;
         opacity: 0.7;
+    }
+    &__bottom-section {
+        @media (min-width: breakpoints.$desktop) {
+            display: flex;
+            * {
+                flex: 1;
+            }
+        }
+    }
+    // &__price-container {
+    // }
+    &__subscription-type {
+        font-weight: bold;
+        font-size: 1.4em;
+    }
+    &__price {
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+    &__frequency {
+        opacity: 0.6;
+        margin-left: 10px;
+    }
+    &__extra-info {
+        display: block;
+        margin-top: 0.7em;
+        padding-bottom: 2em;
+    }
+    &__button {
+        background-color: single-price-grid.$contrast;
+        color: inherit;
+        font-size: 1.1;
+        font-family: inherit;
+        padding: 1em;
+        width: 100%;
+        border-radius: 0.5em;
+    }
+    &__linked-articles {
+        list-style: none;
+        padding: 0;
     }
 }
