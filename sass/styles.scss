@@ -1,4 +1,6 @@
-@use "./components/container";
+// @use "./components/container";
 @use "./components/reset";
 
 @use "./components/order-summary/card-style";
+
+@use "./components/3column-preview-card/column-preview";
