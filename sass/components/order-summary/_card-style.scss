@@ -1,0 +1,16 @@
+.order-summary {
+    &.card {
+        width: 100%;
+        min-width: 25em;
+        max-width: 35em;
+        border-radius: 2em;
+        box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+
+        &_image {
+        }
+    }
+}
