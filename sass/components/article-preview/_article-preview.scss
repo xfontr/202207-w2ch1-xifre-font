@@ -4,17 +4,27 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 10vh;
-    border-radius: 1.5em;
+    border-radius: 1em;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    width: 400px;
+    min-width: 400px;
+    max-width: 750px;
     min-height: 400px;
     box-shadow: 10px 10px 30px 10px rgba(0, 0, 0, 0.1);
+
+    @media (min-width: breakpoints.$desktop) {
+        flex-direction: row;
+        min-height: 300px;
+    }
 
     &__image {
         object-fit: cover;
         height: 225px;
+        @media (min-width: breakpoints.$desktop) {
+            height: auto;
+            max-width: 40%;
+        }
     }
     &__content {
         padding: 2em;
